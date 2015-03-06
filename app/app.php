@@ -17,6 +17,12 @@
 
 	))
 
+	$app->get("/", function() {
+
+		print "Hello world";
+
+	});
+
 	return $app;
 
 ?>
