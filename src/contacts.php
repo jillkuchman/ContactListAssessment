@@ -4,16 +4,46 @@
     {
 
         private $name;
-        private $phonenumber;
+        private $number;
         private $address;
 
-        function __construct($name, $phonenumber, $address)
+        function __construct($name, $number, $address)
         {
 
             $this->name = $name;
-            $this->phonenumber = $phonenumber;
+            $this->number = $number;
             $this->address = $address;
 
+        }
+
+        function setName($str_name)
+        {
+            $this->name = (string) $str_name;
+        }
+
+        function getName()
+        {
+            return $this->name;
+        }
+
+        function setNumber($str_number)
+        {
+            $this->number = (string) $str_number;
+        }
+
+        function getNumber()
+        {
+            return $this->number;
+        }
+
+        function getAddress($str_address)
+        {
+            $this->address = (string) $str_address;
+        }
+
+        function setAddress($str_address)
+        {
+            return $this_address;
         }
 
     }
