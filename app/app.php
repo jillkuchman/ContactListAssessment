@@ -4,9 +4,9 @@
 	require_once __DIR__."/../src/contacts.php";
 
 	session_start();
-	if (empty($_SESSION['contact_list']))
+	if (empty($_SESSION['list_of_contacts']))
 	{
-		$_SESSION['contact_list'] = array();
+		$_SESSION['list_of_contacts'] = array();
 	}
 
 	$app = new Silex\Application();
@@ -24,7 +24,7 @@
 
 	});
 
-	$app->post('/newcontact', function() use($app)
+	$app->post('/create_contact', function() use($app)
 	{
 
 		$newContact = new Contact($_POST['name'], $_POST['number'], $_POST['address']);
@@ -33,7 +33,7 @@
 
 	});
 
-	$app->post('/clear_contacts', function() use($app)
+	$app->post('/delete_contacts', function() use($app)
 	{
 
 		Contact::deleteAll();

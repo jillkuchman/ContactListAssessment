@@ -13,15 +13,13 @@
                 <ul>
                     {% for contact in contacts %}
                         <li>{{ contact.getName }}</li>
-                        <ul>
-                            <li>{{ contact.getNumber }}</li>
-                            <li>{{ contact.getAddress }}</li>
-                        </ul>
+                        <p>Phone number: {{ contact.getNumber }}</p>
+                        <p>Address: {{ contact.getAddress }}</p>
                     {% endfor %}
                 </ul>
             {% endif %}
 
-            <form action='/newcontact' method='post'>
+            <form action='/create_contact' method='post'>
 
                 <label for='name'>Contact Name</label>
                 <input id='name' name='name' type='text'>
@@ -35,7 +33,7 @@
                 <br>
                 <button type='submit'>Add Contact</button>
             </form>
-            <form action='/clear_contacts' method="post">
+            <form action='/delete_contacts' method="post">
                 <button type='submit'>Clear Contact List</button>
             </form>
 
