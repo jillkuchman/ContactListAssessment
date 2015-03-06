@@ -33,6 +33,13 @@
 
 	});
 
+	$app->post('/clear_contacts', function() use($app)
+	{
+
+		Contact::deleteAll();
+		return $app['twig']->render('clearcontacts.php');
+
+	});
 
 
 	return $app;

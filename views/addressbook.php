@@ -7,6 +7,7 @@
     <body>
         <div class='container'>
             <h1>Address Book</h1>
+            <br>
 
             {% if contacts is not empty %}
                 <ul>
@@ -31,7 +32,11 @@
                 <label for='address'>Address</label>
                 <input id='address' name='address' type='text'>
                 <br>
+                <br>
                 <button type='submit'>Add Contact</button>
+            </form>
+            <form action='/clear_contacts' method="post">
+                <button type='submit'>Clear Contact List</button>
             </form>
 
         </div>
