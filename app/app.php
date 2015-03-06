@@ -20,7 +20,7 @@
 	$app->get("/", function() use($app)
 	{
 
-		return $app['twig']->render('addressbook.php', array ('contacts' => Contact::getAll()));
+		return $app['twig']->render('addressbook.twig', array ('contacts' => Contact::getAll()));
 
 	});
 
@@ -29,7 +29,7 @@
 
 		$newContact = new Contact($_POST['name'], $_POST['number'], $_POST['address']);
 		$newContact->save();
-		return $app['twig']->render('newcontact.php', array('newcontact'=>$newContact));
+		return $app['twig']->render('newcontact.twig', array('newcontact'=>$newContact));
 
 	});
 
@@ -37,7 +37,7 @@
 	{
 
 		Contact::deleteAll();
-		return $app['twig']->render('clearcontacts.php');
+		return $app['twig']->render('clearcontacts.twig');
 
 	});
 
