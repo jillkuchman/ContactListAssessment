@@ -46,6 +46,18 @@
             return $this_address;
         }
 
+        function save()
+        {
+            array_push($_SESSION['contact_list'], $this);
+        }
+
+        static function getAll()
+        {
+
+            return $_SESSION['contact_list'];
+
+        }
+
     }
 
 ?>

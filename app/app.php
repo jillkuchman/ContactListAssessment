@@ -24,7 +24,14 @@
 
 	});
 
+	$app->post('/newcontact', function() use($app)
+	{
 
+		$newContact = new Contact($_POST['name'], $_POST['number'], $_POST['address']);
+		$newContact->save();
+		return $app['twig']->render('newcontact.php', array('newcontact'=>$newContact));
+
+	});
 
 
 

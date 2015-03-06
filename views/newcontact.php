@@ -6,6 +6,8 @@
     </head>
     <body>
         <div class='container'>
+            <h1>New contact created!</h1>
+            <a href='/'>Return to address book</a>
         </div>
     </body>
 </html>
