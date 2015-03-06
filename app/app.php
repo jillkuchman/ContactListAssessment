@@ -20,7 +20,7 @@
 	$app->get("/", function() use($app)
 	{
 
-		return $app['twig']->render('addressbook.php');
+		return $app['twig']->render('addressbook.php', array ('contacts' => Contact::getAll()));
 
 	});
 

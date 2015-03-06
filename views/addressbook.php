@@ -8,6 +8,18 @@
         <div class='container'>
             <h1>Address Book</h1>
 
+            {% if contacts is not empty %}
+                <ul>
+                    {% for contact in contacts %}
+                        <li>{{ contact.getName }}</li>
+                        <ul>
+                            <li>{{ contact.getNumber }}</li>
+                            <li>{{ contact.getAddress }}</li>
+                        </ul>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
             <form action='/newcontact' method='post'>
 
                 <label for='name'>Contact Name</label>
