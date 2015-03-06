@@ -7,6 +7,9 @@
     <body>
         <div class='container'>
             <h1>New contact created!</h1>
+            <p>{{ newcontact.getName }}</p>
+            <p>{{ newcontact.getNumber }}</p>
+            <p>{{ newcontact.getAddress }}</p>
             <a href='/'>Return to address book</a>
         </div>
     </body>

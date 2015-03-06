@@ -36,14 +36,14 @@
             return $this->number;
         }
 
-        function getAddress($str_address)
+        function setAddress($str_address)
         {
             $this->address = (string) $str_address;
         }
 
-        function setAddress($str_address)
+        function getAddress()
         {
-            return $this_address;
+            return $this->address;
         }
 
         function save()
