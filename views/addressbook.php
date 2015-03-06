@@ -7,17 +7,21 @@
     <body>
         <div class='container'>
             <h1>Address Book</h1>
+
             <form action='/newcontact' method='post'>
 
                 <label for='name'>Contact Name</label>
                 <input id='name' name='name' type='text'>
+                <br>
                 <label for='number'>Phone Number</label>
                 <input id='number' name='number' type='text'>
+                <br>
                 <label for='address'>Address</label>
                 <input id='address' name='address' type='text'>
-
+                <br>
                 <button type='submit'>Add Contact</button>
             </form>
+
         </div>
     </body>
 </html>

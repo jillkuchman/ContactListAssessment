@@ -3,11 +3,11 @@
 	require_once __DIR__."/../vendor/autoload.php";
 	require_once __DIR__."/../src/contacts.php";
 
-	// session_start();
-	// if (empty($_SESSION['contact_list']))
-	// {
-	// 	$_SESSION['contact_list'] = array();
-	// }
+	session_start();
+	if (empty($_SESSION['contact_list']))
+	{
+		$_SESSION['contact_list'] = array();
+	}
 
 	$app = new Silex\Application();
 
@@ -17,12 +17,16 @@
 
 	));
 
-	$app->get("/", function()
+	$app->get("/", function() use($app)
 	{
 
 		return $app['twig']->render('addressbook.php');
 
 	});
+
+
+
+
 
 	return $app;
 
